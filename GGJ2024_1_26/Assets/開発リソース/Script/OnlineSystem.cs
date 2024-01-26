@@ -9,14 +9,14 @@ public class OnlineSystem : MonobitEngine.MonoBehaviour
 {
     [SerializeField, Header("ルーム作成用テキスト")]
     private Text m_CreateRoomNameText;
-    [SerializeField, Header("ルームパスワード")]
-    private Text m_PassWordText;
+    [SerializeField, Header("ルーム作成用パスワード")]
+    private Text m_CreatePassWordText;
     [SerializeField, Header("ジョインルーム名テキスト")]
     private Text m_JoinRoomNameText;
     [SerializeField, Header("ジョインルームパスワード")]
     private Text m_JoinRoomPasWordText;
 
-    public List<TMP_Text> playerNameListTexts;
+    public List<Text> playerNameListTexts;
 
     [SerializeField, Header("名前入力UI")]
     public List<Text> playerListTexts;
@@ -41,11 +41,11 @@ public class OnlineSystem : MonobitEngine.MonoBehaviour
         Debug.Log(MonobitNetwork.player);
         if (MonobitEngine.MonobitNetwork.isConnect)
         {
-            Debug.Log("コネクト～");
+            Debug.Log("サーバーコネクト");
         }
         else
         {
-            Debug.Log("コネクトじゃない～");
+            Debug.Log("サーバー未接続");
         }
         foreach (MonobitPlayer player in MonobitNetwork.playerList)
         {
@@ -58,7 +58,7 @@ public class OnlineSystem : MonobitEngine.MonoBehaviour
     public void CreateRoom()
     {
         string roomName = m_CreateRoomNameText.text;
-        string roomPassword = m_PassWordText.text;
+        string roomPassword = m_CreatePassWordText.text;
         MonobitEngine.RoomSettings roomsetting = new MonobitEngine.RoomSettings();
         roomsetting.maxPlayers = 2;
         roomsetting.isVisible = true;
