@@ -6,6 +6,9 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
 {
     MonobitEngine.MonobitView m_MonobitView = null;
 
+    [SerializeField, Header("スポナー")]
+    GameObject spawner;
+
     public Animator animator;
     [SerializeField,Header("お笑いポイント")]
     public int m_ComedyPoint;
@@ -109,6 +112,7 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
     private void Die()
     {
         animator.SetBool("Die", true);
+        Destroy(spawner);
     }
     public void EndDie()
     {

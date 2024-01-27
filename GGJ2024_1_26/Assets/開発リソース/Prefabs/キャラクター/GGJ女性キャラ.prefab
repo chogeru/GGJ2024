@@ -1855,7 +1855,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5388875768070777793}
-  - component: {fileID: 175579357}
   m_Layer: 0
   m_Name: J_Bip_C_Neck
   m_TagString: Untagged
@@ -1876,29 +1875,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3660096273643090965}
+  - {fileID: 254276505220061055}
   m_Father: {fileID: 4777953273585859620}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &175579357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3239295444349899507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a849f9a62fb3f8b42b34765d20af5365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SpawnObjPrefab:
-  - {fileID: 7021705943885241479, guid: 1101d13e1647be348abf1faee79cc04d, type: 3}
-  m_SpawnPoints:
-  - {fileID: 214758413}
-  - {fileID: 579420107}
-  - {fileID: 952186018}
-  minSpawnInterval: 3
-  maxSpawnInterval: 10
 --- !u!1 &3460666257867587576
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,39 +3060,39 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 0.067674905
-        y: 1.3822956
-        z: 0.051467896
-      - x: 0.063045345
-        y: 1.3543904
-        z: 0.047576904
-      - x: 0.059398167
-        y: 1.3262671
-        z: 0.04434204
-      - x: -0.06865519
-        y: 1.4170326
-        z: 0.056236267
-      - x: -0.07117936
-        y: 1.3956633
-        z: 0.05205536
-      - x: -0.07420896
-        y: 1.3742583
-        z: 0.048461914
-      - x: 0.002894616
-        y: 1.4148161
-        z: -0.17077637
-      - x: -0.0010202795
-        y: 1.3183488
-        z: -0.19537354
-      - x: -0.005676776
-        y: 1.2206053
-        z: -0.21421051
+      - x: 0.06767491
+        y: 1.3822958
+        z: 0.051471233
+      - x: 0.06304535
+        y: 1.3543906
+        z: 0.047577977
+      - x: 0.059398178
+        y: 1.3262674
+        z: 0.044338167
+      - x: -0.0686552
+        y: 1.4170328
+        z: 0.056241035
+      - x: -0.07117937
+        y: 1.3956635
+        z: 0.052056313
+      - x: -0.07420897
+        y: 1.3742585
+        z: 0.04846555
+      - x: 0.0028946176
+        y: 1.4148165
+        z: -0.17077273
+      - x: -0.001020275
+        y: 1.318349
+        z: -0.19537538
+      - x: -0.0056767687
+        y: 1.2206055
+        z: -0.21420479
       - x: -0.010612048
-        y: 1.1224668
-        z: -0.23081207
-      - x: -0.0155148
-        y: 1.0243715
-        z: -0.24768066
+        y: 1.122467
+        z: -0.23081172
+      - x: -0.015514806
+        y: 1.0243717
+        z: -0.24767947
       attributes:
       - Value: 1
       - Value: 2
@@ -3125,7 +3105,7 @@ MonoBehaviour:
       - Value: 2
       - Value: 2
       - Value: 2
-      maxConnectionDistance: 0.099655785
+      maxConnectionDistance: 0.09965592
       userEdit: 0
   gizmoSerializeData:
     always: 0
@@ -3178,6 +3158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5816c1f5b0343e418186df9420a5815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner: {fileID: 6071721472825978001}
   animator: {fileID: 1522084467735583697}
   m_ComedyPoint: 0
   m_MaxComedyPoint: 100
@@ -4117,6 +4098,58 @@ Transform:
   m_Father: {fileID: 2634192518965052556}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6071721472825978001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 254276505220061055}
+  - component: {fileID: 5233258005694202125}
+  m_Layer: 0
+  m_Name: Spawer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &254276505220061055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6071721472825978001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5388875768070777793}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5233258005694202125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6071721472825978001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a849f9a62fb3f8b42b34765d20af5365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SpawnObjPrefab:
+  - {fileID: 7021705943885241479, guid: 1101d13e1647be348abf1faee79cc04d, type: 3}
+  m_SpawnPoints:
+  - {fileID: 214758413}
+  - {fileID: 579420107}
+  - {fileID: 952186018}
+  minSpawnInterval: 3
+  maxSpawnInterval: 10
 --- !u!1 &6157786840808985579
 GameObject:
   m_ObjectHideFlags: 0
