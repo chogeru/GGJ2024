@@ -805,7 +805,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u30B9\u30C6\u30FC\u30B83(???\u30A8\u30EA\u30A2)"
+  m_Text: "\u30B9\u30C6\u30FC\u30B83(\u30A8\u30AF\u30B9\u30C8\u30E9\u30A8\u30EA\u30A2)"
 --- !u!222 &200005413
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -901,7 +901,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u3042\u306A\u305F:"
+  m_Text: "\u30DB\u30B9\u30C8:"
 --- !u!222 &202837672
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1056,17 +1056,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 0
---- !u!114 &309113743 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4174315422455308756, guid: 6248b8f8592c36f448457f4f2d9350e4, type: 3}
-  m_PrefabInstance: {fileID: 4174315422147842651}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25aeff7cc4424984d98ede902cded940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &330450191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1816,18 +1805,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 309113743}
-        m_TargetAssemblyTypeName: BGMManager, Assembly-CSharp
-        m_MethodName: SetMap2BGM
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &413879739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2065,9 +2042,11 @@ MonoBehaviour:
   - {fileID: 668403258}
   m_ThirdListObjects:
   - {fileID: 2603512322452809201}
+  m_RoomSettingUI: {fileID: 801065947}
   m_GameClearCanvas: {fileID: 5179957261668302881, guid: e5f7f93c4b398994c94b1e54645094ba, type: 3}
   m_ClearBGM: {fileID: 8300000, guid: 69aa0a19f2e28ac4e98d8c976e23b829, type: 3}
   isGameEnd: 0
+  stageType: 0
 --- !u!1 &556795078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,9 +2104,11 @@ MonoBehaviour:
   - {fileID: 488544575}
   m_ThirdListObjects:
   - {fileID: 1664276534}
+  m_RoomSettingUI: {fileID: 801065947}
   m_GameClearCanvas: {fileID: 5179957261668302881, guid: e5f7f93c4b398994c94b1e54645094ba, type: 3}
   m_ClearBGM: {fileID: 8300000, guid: 69aa0a19f2e28ac4e98d8c976e23b829, type: 3}
   isGameEnd: 0
+  stageType: 0
 --- !u!1 &567251297
 GameObject:
   m_ObjectHideFlags: 0
@@ -4722,9 +4703,11 @@ MonoBehaviour:
   - {fileID: 330450193}
   m_ThirdListObjects:
   - {fileID: 4252021388563760835}
+  m_RoomSettingUI: {fileID: 801065947}
   m_GameClearCanvas: {fileID: 5179957261668302881, guid: e5f7f93c4b398994c94b1e54645094ba, type: 3}
   m_ClearBGM: {fileID: 8300000, guid: 69aa0a19f2e28ac4e98d8c976e23b829, type: 3}
   isGameEnd: 0
+  stageType: 0
 --- !u!1 &1192641703
 GameObject:
   m_ObjectHideFlags: 0
@@ -5216,18 +5199,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: 299910bc3f59e2848a07cfa059d240f0, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 309113743}
-        m_TargetAssemblyTypeName: BGMManager, Assembly-CSharp
-        m_MethodName: SetMap1BGM
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6530,18 +6501,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: 299910bc3f59e2848a07cfa059d240f0, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 309113743}
-        m_TargetAssemblyTypeName: BGMManager, Assembly-CSharp
-        m_MethodName: SetMap3BGM
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9057,7 +9016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6297390833242336502, guid: a0716da03da3b4546b2bc4137733e8cb, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6297390833242336502, guid: a0716da03da3b4546b2bc4137733e8cb, type: 3}
       propertyPath: m_LocalScale.x

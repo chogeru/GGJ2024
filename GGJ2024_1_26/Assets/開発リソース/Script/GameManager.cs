@@ -4,21 +4,47 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField,Header("1番最初に出るキャラクター")]
+    [SerializeField, Header("1番最初に出るキャラクター")]
     private GameObject[] m_FirstListObjects;
     [SerializeField, Header("2番目に出るキャラクター")]
     private GameObject[] m_SecondListObjects;
     [SerializeField, Header("3番目に出るキャラクター")]
     private GameObject[] m_ThirdListObjects;
-    [SerializeField,Header("クリア演出用UI")]
+    [SerializeField, Header("ルーム設定UI")]
+    private GameObject m_RoomSettingUI;
+    [SerializeField, Header("クリア演出用UI")]
     public GameObject m_GameClearCanvas;
-    [SerializeField,Header("クリア後のBGM")]
+    [SerializeField, Header("クリア後のBGM")]
     private AudioClip m_ClearBGM;
     private bool isSpawned = true;
     public bool isGameEnd = false;
-
+    public enum StageType
+    {
+        Map1,
+        Map2,
+        Map3,
+    }
+    public StageType stageType;
+    private void Start()
+    {
+        switch (stageType)
+        {
+            case StageType.Map1:
+                BGMManager.Instance.SetMap1BGM();
+                break;
+            case StageType.Map2:
+                BGMManager.Instance.SetMap2BGM();
+                break;
+            case StageType.Map3:
+                BGMManager.Instance.SetMap3BGM();
+                break;
+            default:
+                break;
+        }
+    }
     void Update()
     {
+        m_RoomSettingUI.SetActive(false);
         if (isSpawned)
         {
             foreach (GameObject obj in m_FirstListObjects)

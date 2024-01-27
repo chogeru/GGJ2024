@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5332102926685381005}
   - component: {fileID: 489173726041796922}
   - component: {fileID: 4596414152263357554}
+  - component: {fileID: 5316378687465808248}
   m_Layer: 0
   m_Name: AttackStopCol
   m_TagString: AttackStopPoint
@@ -112,6 +113,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ClickCount: 0
+  m_MinClicCount: 3
+  m_MaxClicCount: 9
+--- !u!114 &5316378687465808248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7250994878586915998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277584237ad31144584195f79af03cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_viewIdField: 0
+  m_IsDontDestroyOnRoom: 0
+  m_IsInstantiated: 0
+  m_ObjectStreamCheckTime: 0
+  m_ObjectStreamSendBytes: 
+  m_IsEncrypt: 1
+  InternalObservedComponents: []
+  ObservedComponents: []
+  ownerId: 0
+  group: 0
+  prefixBackup: -1
+  ownershipTransfer: 0
+  compressedStream: 0
 --- !u!1001 &1347707747444369903
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class CountDown : MonoBehaviour
     [SerializeField]
     GameManager m_GameManager;
     private bool isGameOver= false;
+
     private void Update()
     {
         if (m_GameManager.isGameEnd == false&&!enemySystem.isCountStop)

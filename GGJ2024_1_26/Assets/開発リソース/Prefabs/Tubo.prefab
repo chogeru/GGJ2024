@@ -4825,6 +4825,7 @@ GameObject:
   - component: {fileID: 5489261682393477524}
   - component: {fileID: 223858229861556515}
   - component: {fileID: 5377127025400526526}
+  - component: {fileID: 2171110803776582756}
   m_Layer: 0
   m_Name: Tubo
   m_TagString: HitPoint
@@ -4925,3 +4926,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IncreasePoint: 5
   isHit: 0
+--- !u!114 &2171110803776582756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7021705943885241479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277584237ad31144584195f79af03cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_viewIdField: 0
+  m_IsDontDestroyOnRoom: 0
+  m_IsInstantiated: 0
+  m_ObjectStreamCheckTime: 0
+  m_ObjectStreamSendBytes: 
+  m_IsEncrypt: 1
+  InternalObservedComponents: []
+  ObservedComponents: []
+  ownerId: 0
+  group: 0
+  prefixBackup: -1
+  ownershipTransfer: 0
+  compressedStream: 0
