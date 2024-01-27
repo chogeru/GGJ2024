@@ -13,5 +13,52 @@ MonoBehaviour:
   m_Name: vHierarchy Data
   m_EditorClassIdentifier: 
   sceneDatasByGuid:
-    keys: []
-    values: []
+    keys:
+    - b9b3940e0030e764589af1ddd8a6748c
+    values:
+    - goDatasByGlobalId:
+        keys:
+        - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-1012583365-0
+        - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-2047807973-0
+        - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-1967177612-0
+        - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-1820890709-0
+        - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-1015586287-0
+        - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-504723232-0
+        - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-820140100-0
+        - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-801065947-0
+        values:
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Light Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Canvas Icon
+      goDatasByInstanceId:
+        keys: 5acf0000a0fa00009cf60000a2ee00007ccf0000f4bd00002ec80000a6c70000
+        values:
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Light Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Canvas Icon
