@@ -546,8 +546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d401fcf01ec2542bf9a51b2f388fc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HpSlider: {fileID: 2817597283193742319}
-  m_HpText: {fileID: 195775625423207246}
+  m_Slider: {fileID: 2817597283193742319}
+  m_Text: {fileID: 195775625423207246}
 --- !u!1 &2817597285070381933
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,31 +4,74 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] m_EnemyObjects; 
-    public GameObject m_GameCleaCanvas;
-    [SerializeField]
-    private AudioClip m_CleaBGM;
-    private bool isSpown=true;
-    public bool isGameEnd=false;
+    [SerializeField,Header("1番最初に出るキャラクター")]
+    private GameObject[] m_FirstListObjects;
+    [SerializeField, Header("2番目に出るキャラクター")]
+    private GameObject[] m_SecondListObjects;
+    [SerializeField, Header("3番目に出るキャラクター")]
+    private GameObject[] m_ThirdListObjects;
+    [SerializeField,Header("クリア演出用UI")]
+    public GameObject m_GameClearCanvas;
+    [SerializeField,Header("クリア後のBGM")]
+    private AudioClip m_ClearBGM;
+    private bool isSpawned = true;
+    public bool isGameEnd = false;
+
     void Update()
     {
-        bool allObjectsDestroyed = true;
-        foreach (GameObject obj in m_EnemyObjects)
+        if (isSpawned)
+        {
+            foreach (GameObject obj in m_FirstListObjects)
+            {
+                if (obj != null && obj.activeSelf)
+                {
+                    SetListObjectsActive(m_SecondListObjects, false);
+                    SetListObjectsActive(m_ThirdListObjects, false);
+                    break;
+                }
+            }
+
+            if (AreAllObjectsDestroyed(m_FirstListObjects))
+            {
+                SetListObjectsActive(m_SecondListObjects, true);
+            }
+            if (AreAllObjectsDestroyed(m_SecondListObjects))
+            {
+                SetListObjectsActive(m_ThirdListObjects, true);
+            }
+            if (AreAllObjectsDestroyed(m_ThirdListObjects))
+            {
+                Instantiate(m_GameClearCanvas, transform.position, transform.rotation);
+
+                isGameEnd = true;
+                isSpawned = false;
+                //BGM再生
+                BGMManager.Instance.m_AudioSource.clip = m_ClearBGM;
+                BGMManager.Instance.m_AudioSource.Play();
+            }
+        }
+    }
+
+    bool AreAllObjectsDestroyed(GameObject[] objects)
+    {
+        foreach (GameObject obj in objects)
         {
             if (obj != null)
             {
-                allObjectsDestroyed = false;
-                break;
+                return false;
             }
         }
+        return true;
+    }
 
-        if (allObjectsDestroyed&&isSpown)
+    void SetListObjectsActive(GameObject[] objects, bool active)
+    {
+        foreach (GameObject obj in objects)
         {
-            Instantiate(m_GameCleaCanvas, transform.position, transform.rotation);
-            isGameEnd = true;
-            isSpown = false;
-            BGMManager.Instance.m_AudioSource.clip = m_CleaBGM;
-            BGMManager.Instance.m_AudioSource.Play();
+            if (obj != null)
+            {
+                obj.SetActive(active);
+            }
         }
     }
 }

@@ -11,22 +11,23 @@ public class Spawner : MonoBehaviour
 
     private List<GameObject> m_CurrentSpawnedObjects = new List<GameObject>();
 
-    // 最小および最大のスポーン間隔
-    public float minSpawnInterval = 1f;
-    public float maxSpawnInterval = 5f;
+    [SerializeField,Header("最小スポーン間隔")]
+    private float m_MinSpawnInterval = 3f;
+    [SerializeField, Header("最大スポーン間隔")]
+    private float m_MaxSpawnInterval = 10f;
 
     // 現在の経過時間
-    private float elapsedTime = 0f;
+    private float m_ElapsedTime = 0f;
     // 前回のスポーンからの経過時間
-    private float lastSpawnTime = 0f;
+    private float m_LastSpawnTime = 0f;
 
     void Update()
     {
         // 経過時間を更新
-        elapsedTime += Time.deltaTime;
+        m_ElapsedTime += Time.deltaTime;
 
         // スポーン間隔を超えたらオブジェクトをスポーン
-        if (elapsedTime - lastSpawnTime >= Random.Range(minSpawnInterval, maxSpawnInterval))
+        if (m_ElapsedTime - m_LastSpawnTime >= Random.Range(m_MinSpawnInterval, m_MaxSpawnInterval))
         {
             // ランダムなスポーンポイントを選択
             Transform spawnPoint = m_SpawnPoints[Random.Range(0, m_SpawnPoints.Length)];
@@ -49,7 +50,7 @@ public class Spawner : MonoBehaviour
             m_CurrentSpawnedObjects.Add(spawnedObjectInstance);
 
             // 前回のスポーン時間を更新
-            lastSpawnTime = elapsedTime;
+            m_LastSpawnTime = m_ElapsedTime;
         }
     }
 }

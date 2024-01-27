@@ -1406,7 +1406,7 @@ MonoBehaviour:
   _bursts:
   - time: 0
     count: 100
-    used: 1
+    used: 0
   _particleTrailRenderer: {fileID: 5179957262100364843}
   _trailModule:
     enabled: 1
@@ -2847,7 +2847,7 @@ MonoBehaviour:
   _bursts:
   - time: 0
     count: 100
-    used: 1
+    used: 0
   _particleTrailRenderer: {fileID: 5179957261001832899}
   _trailModule:
     enabled: 1
@@ -4580,6 +4580,7 @@ GameObject:
   - component: {fileID: 5179957261748681160}
   - component: {fileID: 5179957261748681162}
   - component: {fileID: 5179957261748681161}
+  - component: {fileID: 5498582094637701611}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -4646,6 +4647,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &5498582094637701611
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5179957261748681207}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b2998b594e759c546976afe67099eba6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &5179957262100364841
 GameObject:
   m_ObjectHideFlags: 0
