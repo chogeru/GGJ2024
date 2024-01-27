@@ -22,7 +22,7 @@ public class CountDown : MonoBehaviour
         {
             m_CountDownTime = 0;
         }
-
+        DisplayTime(m_CountDownTime);
     }
     private void DisplayTime(float time)
     {
