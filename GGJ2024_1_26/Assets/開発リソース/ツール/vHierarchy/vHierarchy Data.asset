@@ -29,7 +29,6 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-820140100-0
         - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-801065947-0
         - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-1040280419-0
-        - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-309113740-0
         - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-1995063144-0
         values:
         - iColor: 0
@@ -51,11 +50,9 @@ MonoBehaviour:
         - iColor: 0
           icon: AudioSource Icon
         - iColor: 0
-          icon: AudioSource Icon
-        - iColor: 0
           icon: AvatarMask On Icon
       goDatasByInstanceId:
-        keys: 24780000c2850000988400004e8200003a7800008270000016750000da7400001ef00400befd040092fc040048fa040034f004007ce8040010ed0400d4ec04006cf00400f8e50400f6fc0400
+        keys: 6078000004860000d88400008c82000076780000be7000005275000016750000ae780000386e00003c85000038b9feff
         values:
         - iColor: 0
           icon: Canvas Icon
@@ -74,27 +71,13 @@ MonoBehaviour:
         - iColor: 0
           icon: Canvas Icon
         - iColor: 0
-          icon: Canvas Icon
-        - iColor: 0
-          icon: Camera Icon
-        - iColor: 0
-          icon: ScriptableObject Icon
-        - iColor: 0
-          icon: Light Icon
-        - iColor: 0
-          icon: ScriptableObject Icon
-        - iColor: 0
-          icon: ScriptableObject Icon
-        - iColor: 0
-          icon: Terrain Icon
-        - iColor: 0
-          icon: Canvas Icon
-        - iColor: 0
           icon: AudioSource Icon
         - iColor: 0
           icon: AudioSource Icon
         - iColor: 0
           icon: AvatarMask On Icon
+        - iColor: 0
+          icon: 
     - goDatasByGlobalId:
         keys: []
         values: []

@@ -19,6 +19,10 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
     public int m_MaxComedyPoint;
     private float m_NextAttackTime;
 
+    [SerializeField, Header("Å’ZUŒ‚ŽžŠÔ")]
+    private float m_MinAttackTime=3f;
+    [SerializeField,Header("Å’·UŒ‚ŽžŠÔ")]
+    private float m_MaxAttackTime=9f;
     [SerializeField,Header("ƒQ[ƒW")]
     private GameObject m_SliderPrefab;
     [SerializeField, Header("ƒXƒ‰ƒCƒ_[¶¬ˆÊ’u‚Ì‚‚³")]
@@ -80,6 +84,10 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
                 Die();
             }
         }
+        if(m_ComedyPoint>=m_MaxComedyPoint)
+        {
+            m_ComedyPoint = m_MaxComedyPoint;
+        }
         if(isAttckStop)
         {
             if (MonobitEngine.MonobitNetwork.offline == false)
@@ -140,7 +148,7 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
     [MunRPC]
     void SetNextAttackTime()
     {
-        m_NextAttackTime = Time.time + Random.Range(3f, 9f);
+        m_NextAttackTime = Time.time + Random.Range(m_MinAttackTime, m_MaxAttackTime);
     }
     void AddSlider()
     {

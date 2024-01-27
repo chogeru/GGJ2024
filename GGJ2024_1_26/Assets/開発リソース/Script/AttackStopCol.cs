@@ -7,7 +7,10 @@ public class AttackStopCol : MonoBehaviour
     EnemySystem enemySystem;
     public int m_ClickCount;
     private int m_TargetClickCount;
-
+    [SerializeField]
+    private int m_MinClicCount=3;
+    [SerializeField]
+    private int m_MaxClicCount=9;
 
     private void Start()
     {
@@ -28,6 +31,6 @@ public class AttackStopCol : MonoBehaviour
     private void ResetClickCount()
     {
         m_ClickCount = 0;
-        m_TargetClickCount = Random.Range(3, 9);
+        m_TargetClickCount = Random.Range(m_MinClicCount, m_MaxClicCount);
     }
 }
