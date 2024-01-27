@@ -9,7 +9,7 @@ public class BGMManager : MonoBehaviour
     
     [Tab("オーディオソース")]
     [SerializeField]
-    private AudioSource m_AudioSource;
+    public AudioSource m_AudioSource;
     [Tab("SE"), Foldout("SE")]
     [SerializeField, Header("ルーム作成時のBGM")]
     private AudioClip m_RoomScreenBGM;

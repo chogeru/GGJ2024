@@ -11,9 +11,18 @@ public class CountDown : MonoBehaviour
     [SerializeField, Header("カウントダウン用Textオブジェクト")]
     private TextMeshProUGUI m_CountDownText;
 
+    [SerializeField]
+    GameManager m_GameManager;
     private void Update()
     {
-        TimeCountDown();
+        if (m_GameManager.isGameEnd == false)
+        {
+            TimeCountDown();
+        }
+        if(m_GameManager.isGameEnd)
+        {
+            Destroy(gameObject);
+        }
     }
     public void TimeCountDown()
     {

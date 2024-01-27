@@ -8,8 +8,11 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
 
     [SerializeField, Header("スポナー")]
     GameObject spawner;
+    [SerializeField]
+    private GameObject[] m_AttackStopObj;
 
-    public Animator animator;
+    [SerializeField]
+    private Animator animator;
     [SerializeField,Header("お笑いポイント")]
     public int m_ComedyPoint;
     [SerializeField,Header("最大お笑いポイント")]
@@ -22,6 +25,9 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
     private float sliderSpawnHeight = 1.0f;
     [SerializeField, Header("スライダーのサイズ")]
     private Vector3 sliderSize = new Vector3(1.0f, 1.0f, 1.0f);
+
+    public bool isAttckStop=false;
+    private bool isAttack = false;
     void Awake()
     {
         if (MonobitNetwork.offline == false)
@@ -74,11 +80,36 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
                 Die();
             }
         }
+        if(isAttckStop)
+        {
+            if (MonobitEngine.MonobitNetwork.offline == false)
+            {
+                m_MonobitView.RPC("EndAttck", MonobitEngine.MonobitTargets.All, null);
+                isAttckStop = false;
+            }
+            else
+            {
+                EndAttck();
+                isAttckStop=false;
+            }
+        }
+        if(isAttack)
+        {
+            if (MonobitEngine.MonobitNetwork.offline == false)
+            {
+                m_MonobitView.RPC("ActivateAttackStopObjects", MonobitEngine.MonobitTargets.All, null);
+            }
+            else
+            {
+                ActivateAttackStopObjects();
+            }
+        }
     }
     [MunRPC]
     void Attack()
     {
         animator.SetBool("Attack", true);
+        isAttack = true;
         if (MonobitEngine.MonobitNetwork.offline == false)
         {
             m_MonobitView.RPC("SetNextAttackTime", MonobitEngine.MonobitTargets.All, null);
@@ -88,11 +119,24 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
             SetNextAttackTime();
         }
     }
+    [MunRPC]
     public void EndAttck()
     {
         animator.SetBool("Attack", false);
+        isAttack = false;
+        if (MonobitEngine.MonobitNetwork.offline == false)
+        {
+            m_MonobitView.RPC("UseAttackStopObjects", MonobitEngine.MonobitTargets.All, null);
+        }
+        else
+        {
+            UseAttackStopObjects();
+        }
     }
-
+    public void ResetPoint()
+    {
+        m_ComedyPoint = 0;
+    }
     [MunRPC]
     void SetNextAttackTime()
     {
@@ -112,11 +156,28 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
     private void Die()
     {
         animator.SetBool("Die", true);
+        UseAttackStopObjects();
         Destroy(spawner);
     }
     public void EndDie()
     {
         animator.SetBool("Die", false);
         Destroy(gameObject);
+    }
+    [MunRPC]
+    public void ActivateAttackStopObjects()
+    {
+        foreach (GameObject obj in m_AttackStopObj)
+        {
+            obj.SetActive(true);
+        }
+    }
+    [MunRPC]
+    public void UseAttackStopObjects()
+    {
+        foreach (GameObject obj in m_AttackStopObj)
+        {
+            obj.SetActive(false);
+        }
     }
 }
