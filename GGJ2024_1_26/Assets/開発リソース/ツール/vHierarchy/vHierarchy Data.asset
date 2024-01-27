@@ -17,6 +17,7 @@ MonoBehaviour:
     - b9b3940e0030e764589af1ddd8a6748c
     - 
     - f286ec8e1ebc11946a1dd4b70f5ef31a
+    - 103b1f83a86a3bb4896f0ba59e0ed7be
     values:
     - goDatasByGlobalId:
         keys:
@@ -30,6 +31,7 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-801065947-0
         - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-1040280419-0
         - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-1995063144-0
+        - GlobalObjectId_V1-2-b9b3940e0030e764589af1ddd8a6748c-2603512322306611979-257359632
         values:
         - iColor: 0
           icon: Canvas Icon
@@ -51,8 +53,10 @@ MonoBehaviour:
           icon: AudioSource Icon
         - iColor: 0
           icon: AvatarMask On Icon
+        - iColor: 0
+          icon: 
       goDatasByInstanceId:
-        keys: 6078000004860000d88400008c82000076780000be7000005275000016750000ae780000386e00003c85000038b9feff
+        keys: 6078000004860000d88400008c82000076780000be7000005275000016750000ae780000386e00003c85000038b9feff16270d0040560d009e510d008a490d0036270d00be140d00bc1f0d00141f0d00fc270d000c530d00c8bd0d006ecb0d0042ca0d00f6c70d00debd0d0026b60d00baba0d007eba0d0016be0d00a6ca0d008cda0d0032e80d0006e70d00bae40d00a2da0d00ead20d007ed70d0042d70d00dada0d006ae70d00106f0e00b67c0e008a7b0e003e790e00266f0e006e670e00026c0e00c66b0e005e6f0e00ee7b0e0060090f0006170f00da150f008e130f0076090f00be010f0052060f0016060f00ae090f003e160f0020260f00c6330f009a320f004e300f0036260f007e1e0f0012230f00d6220f006e260f00fe320f004457f8ff
         values:
         - iColor: 0
           icon: Canvas Icon
@@ -78,6 +82,134 @@ MonoBehaviour:
           icon: AvatarMask On Icon
         - iColor: 0
           icon: 
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Light Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: AudioSource Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Light Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: AudioSource Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Light Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: AudioSource Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Light Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: AudioSource Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Light Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: AudioSource Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Light Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: ScriptableObject Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: AudioSource Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: 
+    - goDatasByGlobalId:
+        keys: []
+        values: []
+      goDatasByInstanceId:
+        keys: 
+        values: []
     - goDatasByGlobalId:
         keys: []
         values: []

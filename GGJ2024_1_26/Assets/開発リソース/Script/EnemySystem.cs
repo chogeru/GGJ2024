@@ -32,6 +32,8 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
 
     public bool isAttckStop=false;
     private bool isAttack = false;
+    public bool isLastBoss = false;
+    public bool isCountStop=false;
     void Awake()
     {
         if (MonobitNetwork.offline == false)
@@ -165,6 +167,10 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
     {
         animator.SetBool("Die", true);
         UseAttackStopObjects();
+        if(isLastBoss)
+        {
+            isCountStop = true;
+        }
         Destroy(spawner);
     }
     public void EndDie()

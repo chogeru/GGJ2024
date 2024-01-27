@@ -6,21 +6,31 @@ using UnityEngine.UI;
 
 public class CountDown : MonoBehaviour
 {
+    [SerializeField]
+    EnemySystem enemySystem;
     [SerializeField, Header("カウントダウンの時間")]
     private float m_CountDownTime = 60.0f;
     [SerializeField, Header("カウントダウン用Textオブジェクト")]
     private TextMeshProUGUI m_CountDownText;
-
+    [SerializeField, Header("ゲームオーバー用UI")]
+    private GameObject m_GameOverUI;
     [SerializeField]
     GameManager m_GameManager;
+    private bool isGameOver= false;
     private void Update()
     {
-        if (m_GameManager.isGameEnd == false)
+        if (m_GameManager.isGameEnd == false&&!enemySystem.isCountStop)
         {
             TimeCountDown();
         }
         if(m_GameManager.isGameEnd)
         {
+            Destroy(gameObject);
+        }
+        if(m_CountDownTime==0&&!isGameOver)
+        {
+            Instantiate(m_GameOverUI);
+            isGameOver = true;
             Destroy(gameObject);
         }
     }
