@@ -30,6 +30,7 @@ public class BGMManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        RoomScreenBGM();
     }
 
     public void RoomScreenBGM()
