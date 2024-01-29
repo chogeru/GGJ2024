@@ -3171,7 +3171,10 @@ MonoBehaviour:
   m_SliderPrefab: {fileID: 2817597284820428821, guid: 5fb80a3dae166494d993dfa62c39c4e8, type: 3}
   sliderSpawnHeight: 1
   sliderSize: {x: 1, y: 1, z: 1}
+  m_AttackHitCanvas: {fileID: 5179957261668302881, guid: 0643df3e7f7f7f043ab13e2c1cf90523, type: 3}
   isAttckStop: 0
+  isLastBoss: 0
+  isCountStop: 0
 --- !u!1 &5340635400938737249
 GameObject:
   m_ObjectHideFlags: 0

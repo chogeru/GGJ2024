@@ -16,7 +16,7 @@ public class CountDown : MonoBehaviour
     private GameObject m_GameOverUI;
     [SerializeField]
     GameManager m_GameManager;
-    private bool isGameOver= false;
+    public bool isGameOver= false;
 
     private void Update()
     {

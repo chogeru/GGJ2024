@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    CountDown countDown;
+
     [SerializeField, Header("1番最初に出るキャラクター")]
     private GameObject[] m_FirstListObjects;
     [SerializeField, Header("2番目に出るキャラクター")]
@@ -44,6 +47,13 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+        if(countDown.isGameOver)
+        {
+            DestroyNonEmptyObjects(m_FirstListObjects);
+            DestroyNonEmptyObjects(m_SecondListObjects);
+            DestroyNonEmptyObjects(m_ThirdListObjects);
+            return;
+        }
         m_RoomSettingUI.SetActive(false);
         if (isSpawned)
         {
@@ -97,6 +107,16 @@ public class GameManager : MonoBehaviour
             if (obj != null)
             {
                 obj.SetActive(active);
+            }
+        }
+    }
+    void DestroyNonEmptyObjects(GameObject[] objects)
+    {
+        foreach (GameObject obj in objects)
+        {
+            if (obj != null)
+            {
+                Destroy(obj);
             }
         }
     }

@@ -30,6 +30,9 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
     [SerializeField, Header("スライダーのサイズ")]
     private Vector3 sliderSize = new Vector3(1.0f, 1.0f, 1.0f);
 
+    [SerializeField, Header("攻撃ヒット時のUI")]
+    private GameObject m_AttackHitCanvas;
+
     public bool isAttckStop=false;
     private bool isAttack = false;
     public bool isLastBoss = false;
@@ -146,6 +149,7 @@ public class EnemySystem : MonobitEngine.MonoBehaviour
     public void ResetPoint()
     {
         m_ComedyPoint = 0;
+        Instantiate(m_AttackHitCanvas);
     }
     [MunRPC]
     void SetNextAttackTime()
